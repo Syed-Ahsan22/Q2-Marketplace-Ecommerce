@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -10,7 +10,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function ContactUs() {
   const [query, setQuery] = useState("");
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
@@ -44,7 +44,7 @@ export default function ContactUs() {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Help Options */}
           <div className="border border-gray-300 rounded-lg p-4">
-            <h2 className="text-xl font-bold mb-2">What can we help you with?</h2>
+            <h2 className="text-xl font-bold mb-2">What can we help you with</h2>
             <ul className="space-y-2">
               <li className="cursor-pointer text-blue-500 hover:underline">Order Status</li>
               <li className="cursor-pointer text-blue-500 hover:underline">Returns</li>
@@ -58,20 +58,20 @@ export default function ContactUs() {
             <h2 className="text-xl font-bold mb-2">Contact Options</h2>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
-                <span className="font-semibold">Call:</span>
+                <span className="font-semibold">Call</span>
                 <a href="tel:+18005551234" className="text-blue-500 hover:underline">
-                  92-310-451-1387
+                  923104511387
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <span className="font-semibold">Message:</span>
+                <span className="font-semibold">Message</span>
                 <a href="mailto:support@nike.com" className="text-blue-500 hover:underline">
                   support@nike.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <span className="font-semibold">Location:</span>
-                <p>Nike Headquarters, Beaverton, OR</p>
+                <span className="font-semibold">Location</span>
+                <p>Nike Headquarters Beaverton OR</p>
               </li>
             </ul>
           </div>
@@ -79,7 +79,7 @@ export default function ContactUs() {
           {/* Payment Options */}
           <div className="border border-gray-300 rounded-lg p-4">
             <h2 className="text-xl font-bold mb-2">Payments</h2>
-            <p className="mb-2">Choose a payment option below:</p>
+            <p className="mb-2">Choose a payment option below</p>
             <ul className="space-y-2">
               <li className="cursor-pointer text-blue-500 hover:underline">Credit/Debit Card</li>
               <li className="cursor-pointer text-blue-500 hover:underline">PayPal</li>
@@ -91,10 +91,10 @@ export default function ContactUs() {
           {/* Location and More */}
           <div className="border border-gray-300 rounded-lg p-4">
             <h2 className="text-xl font-bold mb-2">Find Us</h2>
-            <p>Visit our stores or find nearby locations. Now Only Online Store:</p>
+            <p>Visit our stores or find nearby locations Now Only Online Store</p>
             <button
               className="mt-4 w-full bg-blue-500 text-white hover:bg-blue-600 px-4 py-2 rounded-md"
-              onClick={() => router.push("/locations")}
+              // onClick={() => router.push("/locations")}
             >
               Find a Store
             </button>

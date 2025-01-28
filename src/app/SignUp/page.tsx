@@ -76,7 +76,7 @@ export default function SignUp() {
             {/* Footer */}
             <div className="mt-4 text-center">
               <p className="text-sm text-gray-600">
-                Already have an account?{" "}
+                Already have an account{" "}
                 <Link href="/Login" className="text-blue-500 hover:underline">
                   Login
                 </Link>

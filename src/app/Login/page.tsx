@@ -71,14 +71,14 @@ export default function Login() {
                 Login
               </button>
               <p className="mt-2 text-center text-red-500 hover:underline cursor-pointer">
-                Forgot Password?
+                Forgot Password
               </p>
             </div>
 
             {/* Footer */}
             <div className="mt-4 text-center">
               <p className="text-sm text-gray-600">
-                Already have an account?{" "}
+                Already have an account{" "}
                 <Link href="/signup" className="text-blue-500 hover:underline">
                   Sign Up
                 </Link>

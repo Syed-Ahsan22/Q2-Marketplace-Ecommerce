@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import Footer from "../components/footer";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -22,7 +22,7 @@ export default function ShippingTrackingPage() {
   const [trackingNumber, setTrackingNumber] = useState<string>("");
   const [trackingStatus, setTrackingStatus] = useState<string | null>(null);
   const [error, setError] = useState<string>("");
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleTrackShipment = () => {
     if (trackingNumber === fakeTrackingData.trackingNumber) {
@@ -68,20 +68,20 @@ export default function ShippingTrackingPage() {
           {trackingStatus && (
             <div className="w-full max-w-md mx-auto bg-white p-6 border border-gray-300 rounded-lg shadow-lg">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">Shipment Status</h2>
-              <p className="text-lg mb-2"><strong>Tracking Number:</strong> {fakeTrackingData.trackingNumber}</p>
-              <p className="text-lg mb-2"><strong>Status:</strong> {trackingStatus}</p>
-              <p className="text-lg mb-2"><strong>Expected Delivery Date:</strong> {fakeTrackingData.expectedDeliveryDate}</p>
+              <p className="text-lg mb-2"><strong>Tracking Number</strong> {fakeTrackingData.trackingNumber}</p>
+              <p className="text-lg mb-2"><strong>Status</strong> {trackingStatus}</p>
+              <p className="text-lg mb-2"><strong>Expected Delivery Date</strong> {fakeTrackingData.expectedDeliveryDate}</p>
 
               <div className="mt-4">
                 <h3 className="text-xl font-semibold mb-2">Shipping Address</h3>
                 <p className="text-lg">
-                  <strong>Name:</strong> {fakeTrackingData.shippingAddress.name}
+                  <strong>Name</strong> {fakeTrackingData.shippingAddress.name}
                 </p>
                 <p className="text-lg">
-                  <strong>Address:</strong> {fakeTrackingData.shippingAddress.address}
+                  <strong>Address</strong> {fakeTrackingData.shippingAddress.address}
                 </p>
                 <p className="text-lg">
-                  <strong>City:</strong> {fakeTrackingData.shippingAddress.city}, {fakeTrackingData.shippingAddress.state} {fakeTrackingData.shippingAddress.zip}
+                  <strong>City</strong> {fakeTrackingData.shippingAddress.city}, {fakeTrackingData.shippingAddress.state} {fakeTrackingData.shippingAddress.zip}
                 </p>
               </div>
             </div>

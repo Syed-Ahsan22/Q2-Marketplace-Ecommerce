@@ -2,7 +2,7 @@
 
 import Navbar from "../components/Navbar";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation"; // Import Next.js router
+// import { useRouter } from "next/navigation"; // Import Next.js router
 import Footer from "../components/footer";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -21,7 +21,7 @@ export default function Cart() {
     { id: 2, name: "Women's Sandals", size: "L", price: 30, quantity: 2 },
   ]);
   const deliveryFee = 10;
-  const router = useRouter();
+  // const router = useRouter();
 
   // Handle quantity changes
   const handleQuantityChange = (id: number, newQuantity: number) => {
@@ -106,7 +106,7 @@ export default function Cart() {
         {/* Checkout Button */}
         <button
           className="w-full mt-6 bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600"
-          onClick={() => router.push("/Checkout")}
+          // onClick={() => router.push("/Checkout")}
         >
           Proceed to Checkout
         </button>

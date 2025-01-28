@@ -15,7 +15,7 @@ import createImageUrlBuider from '@sanity/image-url'
 import type { Image } from 'sanity'
 
 import {dataset, projectId} from '../env'
-import { format } from 'path'
+// import { format } from 'path'
 import { url } from 'inspector'
 
 const imageBuilder = createImageUrlBuider ({

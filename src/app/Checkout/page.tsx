@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
+// import router from "next/dist/client/router";
 
 interface CartItem {
   id: number;
@@ -31,12 +32,12 @@ export default function CheckoutPage() {
   const [billingCountry, setBillingCountry] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("creditCard");
 
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert("Order Submitted Successfully!");
-    router.push("/thank-you"); // Redirect to a Thank You page after successful checkout
+    // router.push("/thank-you"); // Redirect to a Thank You page after successful checkout
   };
 
   const totalPrice = dummyCart.reduce(

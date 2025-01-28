@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import sanityClient from "@sanity/client";
 import Image from "next/image";
@@ -23,8 +24,9 @@ interface Product {
 
 const ProductCards: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [cart, setCart] = useState<Product[]>([]);
+  // const [cart, setCart] = useState<Product[]>([]);
 
+  // Fetch products from Sanity
   const fetchProducts = async () => {
     try {
       const query = `*[_type == "product"] {
@@ -45,8 +47,9 @@ const ProductCards: React.FC = () => {
     }
   };
 
+  // Add product to cart
   const addToCart = (product: Product) => {
-    setCart((prevCart) => [...prevCart, product]);
+    // setCart((prevCart) => [...prevCart, product]);
     alert(`${product.productName} has been added to your cart!`);
   };
 
@@ -56,15 +59,15 @@ const ProductCards: React.FC = () => {
 
   return (
     <div className="p-4">
-      <h2 className="text-center text-slate-800 mt-4 mb-4">
+      <h2 className="text-center text-slate-800 mt-4 mb-4 text-2xl font-bold">
         Products from API
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {products.length > 0 ? (
           products.map((product) => (
             <div
               key={product._id}
-              className="p-4 border rounded-lg shadow hover:shadow-lg"
+              className="p-4 border rounded-lg shadow hover:shadow-lg transition-shadow duration-200"
             >
               <Image
                 src={product.imageUrl}
@@ -72,13 +75,16 @@ const ProductCards: React.FC = () => {
                 width={200}
                 height={200}
                 className="rounded"
+                priority={false} // Improve page loading performance
               />
-              <h3 className="text-lg font-semibold mt-2">
+              <h3 className="text-lg font-semibold mt-2 text-gray-800">
                 {product.productName}
               </h3>
-              <p className="text-sm text-gray-500">{product.description}</p>
-              <p className="text-md font-bold text-blue-600">
-                ${product.price}
+              <p className="text-sm text-gray-500 mb-2">
+                {product.description}
+              </p>
+              <p className="text-md font-bold text-blue-600 mb-2">
+                ${product.price.toFixed(2)}
               </p>
 
               <div className="mt-2 flex flex-wrap gap-2">
@@ -97,7 +103,7 @@ const ProductCards: React.FC = () => {
               </div>
 
               <button
-                className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                className="mt-4 w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
                 onClick={() => addToCart(product)}
               >
                 Add to Cart
@@ -105,7 +111,9 @@ const ProductCards: React.FC = () => {
             </div>
           ))
         ) : (
-          <p className="text-center text-gray-500">No products available</p>
+          <p className="text-center text-gray-500 col-span-full">
+            No products available
+          </p>
         )}
       </div>
     </div>

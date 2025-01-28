@@ -1,30 +1,22 @@
-// "use client";
-
-// import { useState } from "react";
 "use client";
 
-import React, { useEffect, useState } from "react";
-import sanityClient from "@sanity/client";
-// import Image from "next/image";
-
-// Rest of your component logic
-
-import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+// import { useRouter } from "next/navigation";
 import Footer from "../components/footer";
 import Image from "next/image"; // Next.js Image optimization
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Define the type for the cart item (if needed elsewhere)
-interface CartItem {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
-}
+// interface CartItem {
+//   id: number;
+//   name: string;
+//   price: number;
+//   quantity: number;
+// }
 
 export default function ProductDetailPage() {
   const [quantity, setQuantity] = useState(1);
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleAddToCart = () => {
     alert(`Added ${quantity} item(s) to the cart.`);
@@ -51,13 +43,14 @@ export default function ProductDetailPage() {
               width={320} // Adjust dimensions as needed
               height={320}
               className="rounded-lg shadow-lg"
+              priority={true} // Improves image loading performance
             />
           </div>
 
           {/* Product Info */}
           <div className="flex flex-col justify-between">
             <p className="text-lg text-gray-700 mb-4">
-              Experience the perfect fit with the Nike Air Zoom Pegasus 39. With responsive cushioning and a lightweight design, this sneaker offers support for every step, whether you're on the track or hitting the streets.
+              Experience the perfect fit with the Nike Air Zoom Pegasus 39 With responsive cushioning and a lightweight design this sneaker offers support for every step whether you're on the track or hitting the streets
             </p>
 
             <div className="flex items-center mb-6">
@@ -69,6 +62,7 @@ export default function ProductDetailPage() {
               <button
                 onClick={handleDecrease}
                 className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400"
+                aria-label="Decrease quantity"
               >
                 -
               </button>
@@ -76,6 +70,7 @@ export default function ProductDetailPage() {
               <button
                 onClick={handleIncrease}
                 className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400"
+                aria-label="Increase quantity"
               >
                 +
               </button>
