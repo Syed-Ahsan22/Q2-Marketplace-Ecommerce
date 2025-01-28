@@ -50,7 +50,7 @@ export default function ProductDetailPage() {
           {/* Product Info */}
           <div className="flex flex-col justify-between">
             <p className="text-lg text-gray-700 mb-4">
-              Experience the perfect fit with the Nike Air Zoom Pegasus 39 With responsive cushioning and a lightweight design this sneaker offers support for every step whether you're on the track or hitting the streets
+              Experience the perfect fit with the Nike Air Zoom Pegasus 39 With responsive cushioning and a lightweight design this sneaker offers support for every step whether youre on the track or hitting the streets
             </p>
 
             <div className="flex items-center mb-6">
