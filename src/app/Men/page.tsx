@@ -5,6 +5,7 @@ import React, { useState } from "react";
 // import { useRouter } from "next/navigation"; // Import Next.js router
 import Footer from "../components/footer";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Link from "next/link";
 
 
 interface CartItem {
@@ -107,8 +108,10 @@ export default function Cart() {
         <button
           className="w-full mt-6 bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600"
           // onClick={() => router.push("/Checkout")}
-        >
-          Proceed to Checkout
+        ><Link href="/Checkout" className="hover:underline">
+        Proceed to Checkout
+      </Link>
+          
         </button>
       </div>
       <Footer/>

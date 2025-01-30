@@ -47,6 +47,9 @@ export default function Navbar() {
             <Link href="/Contact" className="hover:underline">
               Contact Us
             </Link>
+            <Link href="/List" className="hover:underline">
+              ProductsList
+            </Link>
             <Link href="/About" className="hover:underline">
               About
             </Link>
@@ -57,11 +60,12 @@ export default function Navbar() {
               Men
             </Link>
             <Link href="/Checkout" className="hover:underline">
-              Check Your Order
+              Check Order
             </Link>
             <Link href="/shipping" className="hover:underline">
-              Track Order
+              Tracking
             </Link>
+            
             
           </div>
         </div>
