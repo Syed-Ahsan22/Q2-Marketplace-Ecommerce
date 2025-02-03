@@ -1,5 +1,5 @@
 "use client"
-import Image from "next/image";
+
 import Link from "next/link";
 import { useState } from "react";
 
@@ -14,7 +14,6 @@ export default function Navbar() {
     <p className="text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
       Summer Sale For All Nike Shoes And Free Express Delivery - OFF 50%!
     </p>
-
     <button className="font-semibold underline text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
       Shop Now
     </button>
