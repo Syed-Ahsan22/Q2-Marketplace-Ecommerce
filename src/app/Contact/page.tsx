@@ -6,8 +6,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
-
 export default function ContactUs() {
   const [query, setQuery] = useState("");
   // const router = useRouter();
@@ -21,16 +19,16 @@ export default function ContactUs() {
       {/* Navbar (if needed) */}
       <Navbar />
 
-      <main className="p-6 flex flex-col items-center w-full max-w-4xl mx-auto">
-        <header className="w-full flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Contact Us</h1>
-          <div className="flex gap-2">
+      <main className="p-6 flex flex-col items-center w-full max-w-7xl mx-auto">
+        <header className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6">
+          <h1 className="text-3xl font-bold text-center sm:text-left">Contact Us</h1>
+          <div className="flex flex-col sm:flex-row sm:gap-4 mt-4 sm:mt-0">
             <input
               type="text"
               placeholder="What can we help you with?"
               value={query}
               onChange={handleQueryChange}
-              className="w-64 p-2 border border-gray-300 rounded-md"
+              className="w-full sm:w-64 p-2 border border-gray-300 rounded-md mb-2 sm:mb-0"
             />
             <button
               onClick={() => alert(`Searching for: ${query}`)}
@@ -41,10 +39,10 @@ export default function ContactUs() {
           </div>
         </header>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Help Options */}
           <div className="border border-gray-300 rounded-lg p-4">
-            <h2 className="text-xl font-bold mb-2">What can we help you with</h2>
+            <h2 className="text-xl font-bold mb-2">What can we help  you with</h2>
             <ul className="space-y-2">
               <li className="cursor-pointer text-blue-500 hover:underline">Order Status</li>
               <li className="cursor-pointer text-blue-500 hover:underline">Returns</li>
@@ -65,9 +63,10 @@ export default function ContactUs() {
               </li>
               <li className="flex items-center gap-2">
                 <span className="font-semibold">Message</span>
-                <a href="mailto:support@nike.com" className="text-blue-500 hover:underline">
-                  support@nike.com
-                </a>
+                <a href="mailto:support@nike.com" className="text-blue-500 text-sm sm:text-base md:text-lg hover:underline">
+  support@nike.com
+</a>
+
               </li>
               <li className="flex items-center gap-2">
                 <span className="font-semibold">Location</span>

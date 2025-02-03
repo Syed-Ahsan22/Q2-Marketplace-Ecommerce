@@ -59,6 +59,7 @@ const ProductCards: React.FC = () => {
 
   return (
     <div className="p-4">
+      
       <h2 className="text-center text-slate-800 mt-4 mb-4 text-2xl font-bold">
         Products from API
       </h2>

@@ -7,42 +7,44 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
 export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className="w-[1344px] h-[977px] mt-[58px] ml-[48px]">
+      <div className="w-full max-w-[1344px] h-auto mt-[58px] mx-auto px-4">
         {/* Image Section */}
-        <div className="h-[700px]">
+        <div className="w-full h-auto flex justify-center">
           <Image 
             src="/shoes.png" 
             alt="Shoes Image" 
             width={1344} 
             height={700} 
-            className="object-contain"
+            className="w-full h-auto object-contain"
           />
-        </div> <br />
-        <div className="w-[1008px] h-[229px] top-[748px] left-[168px]">
-        <Image 
+        </div>
+        
+        <div className="w-full max-w-[1008px] h-auto flex justify-center mx-auto mt-6">
+          <Image 
             src="/Frame.png" 
             alt="Shoes Image" 
             width={1008} 
-            height={229} />
-        
+            height={229} 
+            className="w-full h-auto"
+          />
         </div>
       </div>
 
       {/* Product Cards */}
       <ProductCards/>
-      <br /> <br /> <br /> <br />
-
-      <div className="w-[880px] h-[192px] top-[] relative left-[280px]">
-      <Image 
-            src="/Frame1.png" 
-            alt="nike" 
-            width={880} 
-            height={192} />
+      
+      <div className="w-full max-w-[880px] h-auto flex justify-center mx-auto mt-6">
+        <Image 
+          src="/Frame1.png" 
+          alt="nike" 
+          width={880} 
+          height={192} 
+          className="w-full h-auto"
+        />
       </div>
       <Footer/>
     </div>

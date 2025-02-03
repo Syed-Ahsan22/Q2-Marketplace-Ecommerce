@@ -4,17 +4,16 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
 export default function SignUp() {
   return (
     <div>
       <Navbar />
-      <div className="flex justify-center items-center min-h-screen bg-gray-50">
-        <div className="flex gap-12 bg-white shadow-md rounded-lg overflow-hidden">
+      <div className="flex justify-center items-center min-h-screen bg-gray-50 px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row gap-8 bg-white shadow-md rounded-lg overflow-hidden w-full max-w-4xl">
           {/* Left Image Section */}
-          <div className="w-[805px]">
+          <div className="sm:w-1/2">
             <Image
-              className="object-cover"
+              className="object-cover w-full h-full"
               src="/nike2.png"
               alt="Sign Up Illustration"
               width={1720}
@@ -23,7 +22,7 @@ export default function SignUp() {
           </div>
 
           {/* Right Form Section */}
-          <div className="w-[400px] p-6">
+          <div className="sm:w-1/2 w-full p-6">
             <h1 className="text-2xl font-bold text-black mb-2">
               Log in to Exclusive
             </h1>
@@ -85,7 +84,7 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

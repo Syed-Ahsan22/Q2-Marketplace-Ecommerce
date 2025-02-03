@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Logo Section */}
           <div className="flex flex-col items-start">
             <Image
-              src="/path-to-nike-logo.png" // Use Image component for optimized image loading
+              src="/b1.png" // Use Image component for optimized image loading
               alt="Nike Logo"
               width={128} // Adjust as needed
               height={128} // Adjust as needed
@@ -21,7 +21,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="flex flex-col space-y-2">
             <h3 className="font-bold text-lg">Quick Links</h3>
-            <Link href="/shop" className="text-gray-400 hover:text-white text-sm">
+            <Link href="/List" className="text-gray-400 hover:text-white text-sm">
               Shop
             </Link>
             <Link href="/sale" className="text-gray-400 hover:text-white text-sm">
@@ -44,7 +44,7 @@ export default function Footer() {
             <Link href="/returns" className="text-gray-400 hover:text-white text-sm">
               Returns & Exchanges
             </Link>
-            <Link href="/contact" className="text-gray-400 hover:text-white text-sm">
+            <Link href="/Contact" className="text-gray-400 hover:text-white text-sm">
               Contact Us
             </Link>
             <Link href="/terms" className="text-gray-400 hover:text-white text-sm">
@@ -57,7 +57,7 @@ export default function Footer() {
             <h3 className="font-bold text-lg">Follow Us</h3>
             <div className="flex space-x-4">
               <Link
-                href="https://www.facebook.com/nike"
+                href="https://www.facebook.com/shazer.ali.50"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"

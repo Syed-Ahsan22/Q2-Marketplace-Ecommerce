@@ -2,11 +2,9 @@
 
 import Navbar from "../components/Navbar";
 import React, { useState } from "react";
-// import { useRouter } from "next/navigation"; // Import Next.js router
 import Footer from "../components/footer";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Link from "next/link";
-
 
 interface CartItem {
   id: number;
@@ -22,7 +20,6 @@ export default function Cart() {
     { id: 2, name: "Women's Sandals", size: "L", price: 30, quantity: 2 },
   ]);
   const deliveryFee = 10;
-  // const router = useRouter();
 
   // Handle quantity changes
   const handleQuantityChange = (id: number, newQuantity: number) => {
@@ -44,24 +41,26 @@ export default function Cart() {
   return (
     <div className="min-h-screen bg-gray-50 p-6 flex flex-col items-center">
       <Navbar />
-      <h1 className="text-2xl font-bold mb-6">Shopping Cart</h1>
-      <div className="max-w-4xl w-full bg-white shadow-md rounded-lg p-4">
+      <h1 className="text-2xl font-bold mb-6 text-center sm:text-left">Shopping Cart</h1>
+      <div className="max-w-4xl w-full bg-white shadow-md rounded-lg p-4 sm:p-6">
         {/* Cart Items */}
         {cartItems.map((item) => (
           <div
             key={item.id}
-            className="flex justify-between items-center border-b pb-4 mb-4"
+            className="flex flex-col sm:flex-row justify-between items-center sm:items-start border-b pb-4 mb-4"
           >
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-gray-200 rounded-md"></div>
+            <div className="flex items-center gap-4 mb-4 sm:mb-0">
+              <div className="w-16 h-16 bg-gray-200 rounded-md">
+                {/* Add actual product image here */}
+              </div>
               <div>
                 <h2 className="font-semibold">{item.name}</h2>
                 <p className="text-sm text-gray-500">Size: {item.size}</p>
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <p className="font-semibold">${item.price}</p>
-              <div className="flex items-center">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+              <p className="font-semibold text-center sm:text-left">${item.price}</p>
+              <div className="flex items-center gap-2">
                 <button
                   className="px-2 py-1 bg-gray-200 rounded-l-md"
                   onClick={() =>
@@ -107,14 +106,13 @@ export default function Cart() {
         {/* Checkout Button */}
         <button
           className="w-full mt-6 bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600"
-          // onClick={() => router.push("/Checkout")}
-        ><Link href="/Checkout" className="hover:underline">
-        Proceed to Checkout
-      </Link>
-          
+        >
+          <Link href="/Checkout" className="hover:underline">
+            Proceed to Checkout
+          </Link>
         </button>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
